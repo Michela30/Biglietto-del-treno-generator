@@ -14,6 +14,42 @@ problema: Calcolo del prezzo del biglietto del treno
 6) SE l'utente è over 65
     ALLORA si applica sconto del 40%
 7) Indicare prezzo finale in pagina con la somma dei km ed età (con i possibili sconti)
-8) 
 
 */
+
+
+// Creare button che verrà utilizzato per sottoscrivere il form
+const myButton = document.getElementById('my-button');
+
+myButton.addEventListener('click',
+function(){
+
+        // Chiedere all'utente quanti km vuole percorrere come input
+
+        let km = document.getElementById("km").value;
+
+        // Chiedere all'utente l'età come input
+
+        let age = document.getElementById("age").value;
+
+        const priceperKm = 0.21;
+        let price = (priceperKm * km);
+        let discount = 0;
+
+
+        // SE l'utente è minorenne o over
+
+            if(age == 'minorenne'){
+                discount = (price * 0.2);
+
+            }else if(age == 'over'){
+                discount = (price * 0.4);
+
+            }
+            //qui ci sarà la somma per fare il prezzo
+           
+            price = ((priceperKm * km) - discount);
+            console.log ('price', price, typeof price)
+
+}
+);
