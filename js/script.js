@@ -56,7 +56,7 @@ function(){
 
             
             //stampa in pagina
-            document.querySelector('.price-area').innerHTML = '€' + price;
+            document.querySelector('.price-area').innerHTML = '€' + price.toFixed(2);
             document.querySelector('.nameFinal').innerHTML = name;
 
             document.querySelector('.carrozza').innerHTML = Math.floor(Math.random() * 11);
