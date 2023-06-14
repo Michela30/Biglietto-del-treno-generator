@@ -37,7 +37,9 @@ function(){
         let discount = 0;
 
         if (isNaN(km) || (age == '0')){
-            alert ("Errore");
+            alert ("Errore, compila tutti i campi");
+        }else if((name = " ") || (name = 'undefined')){
+            alert ("Errore, Nome e Cognome campo obbligatorio");
         } else {
             // SE l'utente è minorenne o over
 
